@@ -161,3 +161,16 @@ int main() {
     ehpar(num);
     return 0;
 }
+
+
+Algoritmo questao 8:
+#include <iostream>
+using namespace std;
+   void mostrarMensagem(){
+       cout<<"Seja bem vindo.";
+   }
+
+int main() {
+    mostrarMensagem();
+    return 0;
+}
