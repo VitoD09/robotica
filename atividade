@@ -306,3 +306,29 @@ int main() {
 
     return 0;
 }
+
+
+Algoritmo da questao 16:
+#include <iostream>
+using namespace std;
+    void trocar(int &a, int&b){
+        int *refA, *refB;
+
+        refA = &a;
+        refB = &b;
+
+        cout<<"O valor da variavel num1 foi para referenciaA "<<*refA<<"\n"<<"E o valor da variavel num2 foi para referenciaB "<<*refB<<endl;
+    }
+
+int main() {
+    int num1, num2;
+
+    cout<<"Informe um valor: "<<endl;
+    cin>> num1;
+    cout<<"Informe outro valor: "<<endl;
+    cin>> num2;
+    
+    trocar(num1,num2);
+
+    return 0;
+}
