@@ -552,3 +552,121 @@ int main() {
 
     return 0;
 }
+
+
+
+Algoritmo questao 27:
+#include <iostream>
+using namespace std;
+
+const float LIMITE_SAQUE = 1000.0;
+const float LIMITE_DEPOSITO = 5000.0;
+
+float saldo = 0.0;
+
+void consultarSaldo() {
+    cout << "Saldo atual: R$ " << saldo << endl;
+}
+
+void depositar(float valor) {
+    if (valor > 0 && valor <= LIMITE_DEPOSITO) {
+        saldo += valor;
+        cout << "Deposito de R$" << valor << " realizado com sucesso!" << endl;
+    } else {
+        cout << "Valor invalido para deposito!" << endl;
+    }
+}
+
+void sacar(float valor) {
+    if (valor > 0 && valor <= saldo && valor <= LIMITE_SAQUE) {
+        saldo -= valor;
+        cout << "Saque de R$" << valor << " realizado com sucesso!" << endl;
+    } else {
+        cout << "Valor invalido para saque!" << endl;
+    }
+}
+
+int main() {
+    depositar(1000);
+    sacar(200);
+    consultarSaldo();
+    return 0;
+}
+
+
+
+Algoritmo questao 28:
+#include <iostream>
+using namespace std;
+
+struct Pessoa {
+    string nome;
+    int idade;
+    float altura;
+};
+
+void imprimirPessoa(Pessoa* p) {
+    cout << "Nome: " << p->nome << endl;
+    cout << "Idade: " << p->idade << " anos" << endl;
+    cout << "Altura: " << p->altura << " m" << endl;
+}
+
+int main() {
+    Pessoa pessoa = {"Ana", 25, 1.65};
+    imprimirPessoa(&pessoa);
+    return 0;
+}
+
+
+
+Algoritmo questao 29:
+#include <iostream>
+using namespace std;
+
+void trocar(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void trocar(float* x, float* y) {
+    float temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int main() {
+    int x = 5, y = 10;
+    float a = 1.5, b = 3.2;
+
+    cout << "Antes (int): x = " << x << ", y = " << y << endl;
+    trocar(&x, &y);
+    cout << "Depois (int): x = " << x << ", y = " << y << endl;
+
+    cout << "\nAntes (float): a = " << a << ", b = " << b << endl;
+    trocar(&a, &b);
+    cout << "Depois (float): a = " << a << ", b = " << b << endl;
+
+    return 0;
+}
+
+
+
+Algoritmo questao 30:
+#pragma once
+#include <iostream>
+using namespace std;
+
+void exibeDobro(int valor) {
+    cout << "Dobro (valor): " << valor * 2 << endl;
+}
+
+void incrementaRef(int &ref) {
+    ref++;
+}
+
+void trocaValores(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
