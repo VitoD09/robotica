@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-    int pont (int num){
+    void pont (int num){
         int *ptr = &num;
         *ptr = *ptr * 2;
         cout<< *ptr <<endl;
