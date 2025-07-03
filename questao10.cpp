@@ -7,3 +7,15 @@ using namespace std;
            cout<< num2 <<" e maior que "<<num1<<endl;
        }
    }
+int main() {
+    float valor1, valor2;
+    
+    cout<<"Informe o primeiro numero: ";
+    cin>> valor1;
+    cout<<"Informe o segundo nunero: ";
+    cin>> valor2;
+    
+    comparacao(valor1,valor2);
+    return 0;
+}
+
